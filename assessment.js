@@ -45,6 +45,15 @@ assessmentButton.addEventListener(
   }
 );
 
+userNameInput.addEventListener(
+  'keydown',
+  (event) => {
+    if (event.key === 'Enter') {
+      assessmentButton.dispatchEvent(new Event('click'))
+    }
+  }
+)
+
 const answers = [
   '###userName###のいいところは声です。###userName###の特徴的な声は皆を惹きつけ、心に残ります。',
   '###userName###のいいところはまなざしです。###userName###に見つめられた人は、気になって仕方がないでしょう。',
